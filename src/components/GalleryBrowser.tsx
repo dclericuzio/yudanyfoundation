@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { albums } from "@/lib/site";
 
 export function GalleryBrowser() {
-  const [album, setAlbum] = useState<string>("all");
+  const [album, setAlbum] = useState<string>("rumah-roti");
   const [active, setActive] = useState<number | null>(null);
 
   const photos = useMemo(() => {

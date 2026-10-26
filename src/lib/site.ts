@@ -18,12 +18,19 @@ export const contact = {
 };
 
 export const nav = [
+  { href: "/rumah-roti", label: "Rumah Roti" },
   { href: "/who-we-are", label: "Who we are" },
-  { href: "/children", label: "Children" },
+  { href: "/children", label: "History" },
   { href: "/programs", label: "Programs" },
   { href: "/gallery", label: "Gallery" },
   { href: "/give", label: "Ways to give" },
 ] as const;
+
+export const rumahRoti = {
+  name: "Rumah Roti",
+  residents: 85,
+  under: 'Yayasan Heesu "Cahaya Cinta"',
+} as const;
 
 export const children = [
   "Anis",
@@ -106,6 +113,62 @@ export const donors = [
   "Orangtua anak dan donatur pribadi lainnya",
 ] as const;
 
+const rumahRotiAlts = [
+  "Pengasuh dan warga berfoto di dalam Rumah Roti.",
+  "Warga Rumah Roti berfoto bersama di aula, sebagian mengangkat tangan.",
+  "Warga berkumpul di aula berhias umbul-umbul, banyak yang duduk di kursi roda.",
+  "Warga berkumpul di halaman Rumah Roti di bawah umbul-umbul merah putih.",
+  "Warga duduk melingkar di ruang berkumpul.",
+  "Warga mengikuti kegiatan bersama di ruang berkumpul.",
+  "Warga duduk berjajar di aula yang panjang.",
+  "Suasana aula Rumah Roti yang dipenuhi warga dan kursi roda.",
+  "Warga berkumpul di ruang kegiatan.",
+  "Warga makan bersama, duduk di lantai aula.",
+  "Dua orang membawa piring makanan dari dapur.",
+  "Seorang warga makan siang di kursi roda.",
+  "Warga makan nasi bersama di lantai.",
+  "Warga makan di aula, salah satunya menggunakan alat bantu jalan.",
+  "Warga makan bersama di halaman yang dinaungi pohon.",
+  "Warga di kursi roda makan di halaman.",
+  "Warga lanjut usia makan bersama di halaman.",
+  "Dua warga lanjut usia duduk di kursi roda di halaman.",
+  "Dua warga berbincang sambil memegang gelas di halaman.",
+  "Makan bersama di halaman belakang Rumah Roti.",
+  "Foto bersama warga di aula, dengan kaos biru dan merah.",
+  "Seorang warga memegang piring makan siang.",
+  "Warga lanjut usia makan bersama dengan kaos merah.",
+  "Warga makan di sepanjang koridor rumah.",
+  "Warga berkumpul di aula, sebagian di kursi roda.",
+  "Warga duduk melingkar untuk kegiatan bersama.",
+  "Warga duduk berjajar di aula yang terang.",
+  "Warga duduk berderet di sepanjang dinding aula.",
+  "Seorang warga di kursi roda berada di koridor.",
+  "Warga menonton tayangan bersama di aula.",
+  "Warga dengan kaos merah berkumpul di aula.",
+  "Aula Rumah Roti penuh warga berkaos merah.",
+  "Koridor yang dipenuhi warga di kursi roda.",
+  "Pengasuh menemani warga yang sedang makan.",
+  "Dua warga tersenyum di dalam rumah.",
+  "Dua warga berfoto, salah satunya mengacungkan jempol.",
+  "Seorang warga menyapu jalan batu di halaman.",
+  "Meja pemeriksaan dengan kotak obat saat kunjungan kesehatan.",
+  "Warga mengikuti pemeriksaan kesehatan di dalam rumah.",
+  "Pengasuh membagikan makanan kepada warga.",
+  "Warga dan pengasuh merapikan tanaman di samping rumah.",
+  "Warga duduk di beranda sambil ditemani pengasuh.",
+  "Warga beristirahat di koridor dekat galon air minum.",
+  "Warga di kursi roda berada di koridor dalam rumah.",
+];
+
+export const rumahRotiPhotos = rumahRotiAlts.map((alt, index) => ({
+  src: `/images/rumah-roti/${String(index + 1).padStart(2, "0")}.jpeg`,
+  alt,
+}));
+
+export const rumahRotiFeatured = [4, 15, 21, 12, 32, 38, 24, 41].map(
+  (number) => rumahRotiPhotos[number - 1],
+);
+
 export type GalleryAlbum = {
   id: string;
   title: string;
@@ -114,8 +177,13 @@ export type GalleryAlbum = {
 
 export const albums: GalleryAlbum[] = [
   {
+    id: "rumah-roti",
+    title: "Rumah Roti",
+    images: rumahRotiPhotos,
+  },
+  {
     id: "physiotherapy",
-    title: "Fisioterapi",
+    title: "Arsip · Fisioterapi",
     images: ["", "1", "2", "3", "4"].map((n) => ({
       src: `/images/gallery/physiotherapy/terapi${n}.jpg`,
       alt: "Sesi fisioterapi di Yayasan Heesu",
@@ -123,7 +191,7 @@ export const albums: GalleryAlbum[] = [
   },
   {
     id: "education",
-    title: "Pendidikan khusus",
+    title: "Arsip · Pendidikan khusus",
     images: ["0", "1", "2", "3", "4"].map((n) => ({
       src: `/images/gallery/education/pensus${n}.jpg`,
       alt: "Kegiatan pendidikan luar biasa di Yayasan Heesu",
@@ -131,7 +199,7 @@ export const albums: GalleryAlbum[] = [
   },
   {
     id: "perkins",
-    title: "Perkins",
+    title: "Arsip · Perkins",
     images: ["", "1", "2", "3", "4"].map((n) => ({
       src: `/images/gallery/perkins/perkins${n}.jpg`,
       alt: "Kegiatan bersama Perkins di Yayasan Heesu",
@@ -139,7 +207,7 @@ export const albums: GalleryAlbum[] = [
   },
   {
     id: "speech",
-    title: "Terapi wicara",
+    title: "Arsip · Terapi wicara",
     images: ["", "1", "2"].map((n) => ({
       src: `/images/gallery/speech/wicara${n}.jpg`,
       alt: "Sesi terapi wicara di Yayasan Heesu",

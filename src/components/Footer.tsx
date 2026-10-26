@@ -8,13 +8,15 @@ export function Footer() {
         <div className="md:col-span-5">
           <p className="font-display text-3xl text-white">Yudany Foundation</p>
           <p className="mt-3 max-w-sm text-sm leading-6 text-sand/75">
-            Yayasan Kasih Karunia Yudany, bersama {contact.homeName}, merawat dan memberdayakan anak penyandang disabilitas ganda di Cileungsi.
+            Yayasan Kasih Karunia Yudany bersama {contact.homeName}. Rumah yang dijalankan hari ini adalah Rumah Roti, bagi orang tua terlantar dan orang dengan gangguan jiwa.
           </p>
         </div>
         <div className="md:col-span-3">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-leaf">Kunjungi</p>
           <ul className="mt-3 space-y-2 text-sm">
+            <li><Link className="hover:text-white" href="/rumah-roti">Rumah Roti</Link></li>
             <li><Link className="hover:text-white" href="/who-we-are">Who we are</Link></li>
+            <li><Link className="hover:text-white" href="/children">Children we cared for</Link></li>
             <li><Link className="hover:text-white" href="/care">Conditions we support</Link></li>
             <li><Link className="hover:text-white" href="/people">Board & team</Link></li>
             <li><Link className="hover:text-white" href="/give">Ways to give</Link></li>

@@ -5,7 +5,7 @@ import { contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Who we are",
-  description: "Sejarah, visi, misi, legalitas, dan lokasi Yayasan Yudany dan Yayasan Heesu.",
+  description: "Sejarah Yayasan Yudany dan Yayasan Heesu, dari panti anak sampai Rumah Roti yang kini merawat 85 jiwa.",
 };
 
 const missions = [
@@ -24,9 +24,10 @@ export default function WhoWeArePage() {
           Sebuah panti yang berdiri dari kepedulian.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-          Yudany menaungi karya kasih ini. Heesu adalah rumah tempat karya itu dijalankan setiap hari.
+          Yudany menaungi karya kasih ini. Heesu yang menjalankannya. Hari ini karya itu bernama Rumah Roti.
         </p>
         <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold">
+          <Link href="/rumah-roti" className="rounded-full bg-green px-4 py-2 text-white">Rumah Roti</Link>
           <a href="#history" className="rounded-full bg-white px-4 py-2 ring-1 ring-line">History</a>
           <a href="#vision" className="rounded-full bg-white px-4 py-2 ring-1 ring-line">Vision</a>
           <a href="#legal" className="rounded-full bg-white px-4 py-2 ring-1 ring-line">Legalities</a>
@@ -47,7 +48,7 @@ export default function WhoWeArePage() {
             Yayasan Heesu “Cahaya Cinta” didirikan pada 11 November 2008 oleh Poong Nam Choi, warga Korea Selatan, dan diresmikan Departemen Sosial Republik Indonesia pada 14 Maret 2009.
           </p>
           <p>
-            Anak-anak di Heesu membutuhkan fisioterapi, terapi wicara, dan okupasi terapi. Mereka juga didampingi dokter anak, dokter neurologi, dokter ortopedi, dokter rehabilitasi medik, terapis, ahli gizi, psikolog, guru pendidikan luar biasa, dan tenaga medis lain.
+            Pada masa itu, anak-anak di Heesu membutuhkan fisioterapi, terapi wicara, dan okupasi terapi. Mereka juga didampingi dokter anak, dokter neurologi, dokter ortopedi, dokter rehabilitasi medik, terapis, ahli gizi, psikolog, guru pendidikan luar biasa, dan tenaga medis lain.
           </p>
           <p>
             Saat awal berdiri, tim rehabilitasi hanya terdiri dari seorang fisioterapis, perawat, dan dokter umum. Novi, fisioterapis pertama, merangkap sebagai okupasi terapis dan terapi wicara demi memperbaiki kemampuan makan, gerak, dan bicara anak.
@@ -55,13 +56,22 @@ export default function WhoWeArePage() {
           <p>
             Semua tenaga ahli sampai pengasuh diarahkan untuk menghidupkan suasana kekeluargaan. Heesu berdiri dari sekelompok profesional dan relawan yang peduli pada anak penyandang disabilitas ganda. Individu, perusahaan, komunitas, dan organisasi — dari dalam maupun luar negeri — datang membawa bakti sosial, donasi, atau sekadar kunjungan untuk menghibur anak-anak.
           </p>
+          <p>
+            Masa itu sudah berganti. Anak-anak yang dulu diasuh tidak semuanya masih dapat ditemui. Yang masih dalam pendampingan tinggal Vina dan dua anak lain, dititipkan di Yayasan Sayap Ibu. Potret mereka disimpan sebagai arsip.
+          </p>
+          <p>
+            Yang dijalankan sekarang adalah Rumah Roti, di bawah naungan Yayasan Heesu. Rumah ini merawat 85 jiwa: orang tua terlantar dan orang dengan gangguan jiwa.
+          </p>
+          <Link href="/children" className="inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-navy underline decoration-leaf decoration-2 underline-offset-4">
+            Arsip anak-anak yang pernah diasuh
+          </Link>
         </div>
       </section>
 
       <section id="vision" className="bg-white">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2">
           <div>
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Vision</p>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Vision saat berdiri</p>
             <p className="mt-4 font-display text-3xl leading-snug">
               Menjadi panti perawatan anak penyandang disabilitas ganda yang terbaik dan terpercaya, agar pemberdayaan mereka seoptimal mungkin dan mereka lebih mandiri secara fisik dan sosial.
             </p>

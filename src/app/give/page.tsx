@@ -16,7 +16,7 @@ export default function GivePage() {
           Donasi yang langsung sampai ke rumah perawatan.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-          Yayasan Heesu menyiapkan rekening khusus bantuan pasien anak. Setelah transfer, kirimkan bukti agar pencatatannya rapi.
+          Donasi disalurkan ke rekening Yayasan Heesu, badan yang menaungi Rumah Roti. Setelah transfer, kirimkan bukti agar pencatatannya rapi.
         </p>
       </header>
 

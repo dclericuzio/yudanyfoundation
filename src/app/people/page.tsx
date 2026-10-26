@@ -17,7 +17,7 @@ export default function PeoplePage() {
           Orang-orang yang menjaga rumah ini.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-          Pengurus menjalankan yayasan. Di dalam panti, terapis, perawat, guru, dan pengasuh bekerja dengan semangat kekeluargaan.
+          Pengurus menjalankan yayasan. Potret tenaga di halaman ini berasal dari masa Heesu mengasuh anak-anak. Rumah yang dijalankan hari ini adalah Rumah Roti.
         </p>
       </header>
 
@@ -38,7 +38,7 @@ export default function PeoplePage() {
         <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-8">
           <h2 className="font-display text-3xl">Professionals</h2>
           <p className="mt-3 max-w-2xl text-muted">
-            Tenaga yang mendampingi terapi, perawatan, dan kegiatan harian anak.
+            Tenaga yang mendampingi terapi, perawatan, dan kegiatan harian pada masa panti anak.
           </p>
           <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
             {professionals.map((name) => (
@@ -54,7 +54,7 @@ export default function PeoplePage() {
       <section className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8">
         <h2 className="font-display text-3xl">Organization</h2>
         <p className="mt-3 max-w-2xl text-muted">
-          Bagan yayasan: dari pembina dan pengawas, ketua, sampai koordinator terapi, perawat, pengasuh, dan keamanan.
+          Bagan dari masa panti anak: pembina dan pengawas, ketua, sampai koordinator terapi, perawat, pengasuh, dan keamanan.
         </p>
         <div className="mt-8 overflow-hidden rounded-[1.6rem] bg-white p-4 ring-1 ring-line sm:p-8">
           <Image

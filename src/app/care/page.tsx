@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Conditions we support",
   description:
-    "Materi Yayasan Heesu tentang cerebral palsy, autisme, disabilitas intelektual, tunawicara, dan tunanetra.",
+    "Arsip materi Yayasan Heesu tentang cerebral palsy, autisme, disabilitas intelektual, tunawicara, dan tunanetra, dari masa perawatan anak.",
 };
 
 const sections = [
@@ -20,10 +20,10 @@ export default function CarePage() {
       <header className="mx-auto w-full max-w-6xl px-5 pb-4 pt-14 sm:px-8">
         <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Understanding</p>
         <h1 className="mt-3 max-w-3xl font-display text-5xl leading-[0.95] sm:text-6xl">
-          Kondisi yang dihadapi anak-anak Heesu.
+          Kondisi yang dulu dihadapi anak-anak Heesu.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-          Ringkasan ini mengikuti materi yang yayasan terbitkan untuk keluarga. Istilah klinis dipertahankan agar selaras dengan naskah asli, termasuk tunagrahita yang masih dipakai dalam pendidikan luar biasa di Indonesia.
+          Halaman ini arsip dari masa perawatan anak. Penghuni Rumah Roti hari ini adalah orang tua terlantar dan orang dengan gangguan jiwa. Istilah klinis di bawah dipertahankan agar selaras dengan naskah asli, termasuk tunagrahita yang masih dipakai dalam pendidikan luar biasa di Indonesia.
         </p>
         <nav className="mt-8 flex flex-wrap gap-2" aria-label="Conditions">
           {sections.map((item) => (

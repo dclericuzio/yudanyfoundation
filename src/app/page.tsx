@@ -1,32 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Portrait } from "@/components/Portrait";
-import { childImage, children } from "@/lib/site";
+import { childImage, children, rumahRotiPhotos } from "@/lib/site";
 
 const pillars = [
   {
     index: "01",
-    title: "Dukungan psikologis",
-    text: "Suasana kekeluargaan, pendampingan, dan rasa aman bagi anak yang kehilangan jalan.",
+    title: "Rumah",
+    text: "Tempat tinggal bagi orang tua terlantar dan orang dengan gangguan jiwa, di bawah naungan Yayasan Heesu.",
   },
   {
     index: "02",
-    title: "Edukasi",
-    text: "Pendidikan luar biasa yang mengikuti ritme dan kemampuan masing-masing anak.",
+    title: "Meja makan",
+    text: "Makan bersama di aula, beranda, dan halaman adalah ritme harian Rumah Roti.",
   },
   {
     index: "03",
-    title: "Fisioterapi",
-    text: "Terapi gerak, okupasi, dan wicara agar tubuh dan kemandirian terus bertumbuh.",
+    title: "Pendampingan",
+    text: "Pengasuh menemani kegiatan, kesehatan, dan kehidupan sehari-hari delapan puluh lima warga.",
   },
 ];
 
 const paths = [
-  { href: "/programs#therapies", title: "Terapi", text: "Fisioterapi, okupasi, dan terapi wicara setiap hari." },
-  { href: "/programs#education", title: "Belajar", text: "Kelas dan layanan khusus di luar kurikulum sekolah biasa." },
-  { href: "/programs#care", title: "Perawatan", text: "Gizi, kejang, dan pengobatan harian yang dijaga rutin." },
-  { href: "/programs#community", title: "Sekitar", text: "Open house, kurban, dan pengobatan gratis bagi desa." },
+  { href: "/rumah-roti", title: "Rumah Roti", text: "Rumah yang kini dijalankan Heesu, bagi 85 jiwa." },
+  { href: "/rumah-roti#hari", title: "Hari bersama", text: "Makan, berkumpul, dan tinggal dalam satu halaman." },
+  { href: "/rumah-roti#kesehatan", title: "Kesehatan", text: "Pemeriksaan dan pendampingan yang datang ke rumah." },
+  { href: "/children", title: "Arsip anak", text: "Anak-anak yang dulu diasuh. Vina dan dua anak lain kini di Yayasan Sayap Ibu." },
 ];
+
+const hero = rumahRotiPhotos[3];
+const today = rumahRotiPhotos[14];
+const givePhoto = rumahRotiPhotos[37];
 
 export default function HomePage() {
   return (
@@ -41,21 +45,21 @@ export default function HomePage() {
               Kasih yang <span className="italic text-navy">menjadi pelita.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
-              Yudany hadir bagi anak-anak yang membutuhkan perhatian khusus — lewat dukungan psikologis, edukasi, dan fisioterapi — bersama Yayasan Heesu di Cileungsi, Bogor.
+              Yang dijalankan hari ini adalah Rumah Roti, di bawah naungan Yayasan Heesu. Rumah ini merawat 85 jiwa: orang tua terlantar dan orang dengan gangguan jiwa, di Cileungsi, Bogor.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/give" className="rounded-full bg-green px-5 py-3 text-sm font-semibold text-white hover:bg-navy">
-                Ways to give
+              <Link href="/rumah-roti" className="rounded-full bg-green px-5 py-3 text-sm font-semibold text-white hover:bg-navy">
+                Rumah Roti
               </Link>
-              <Link href="/children" className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink ring-1 ring-line hover:bg-paper-deep">
-                Meet the children
+              <Link href="/give" className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink ring-1 ring-line hover:bg-paper-deep">
+                Ways to give
               </Link>
             </div>
           </div>
           <dl className="grid min-w-0 grid-cols-3 gap-4 lg:col-span-5">
             {[
+              ["85", "Jiwa di Rumah Roti"],
               ["2008", "Heesu berdiri"],
-              ["19", "Anak diasuh"],
               ["Bogor", "Desa Situsari"],
             ].map(([value, label]) => (
               <div key={label} className="border-t border-ink/15 pt-3">
@@ -70,15 +74,15 @@ export default function HomePage() {
       <section className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="relative h-[46vw] min-h-56 max-h-[460px] overflow-hidden rounded-[2rem]">
           <Image
-            src="/images/hero-hands.jpg"
-            alt="Dua pengasuh bertepuk tangan bersama seorang anak di kursi roda di beranda Yayasan Heesu"
+            src={hero.src}
+            alt={hero.alt}
             fill
             priority
             sizes="100vw"
             className="object-cover object-[center_40%]"
           />
           <p className="absolute bottom-4 left-4 rounded-full bg-paper/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink sm:bottom-6 sm:left-6">
-            Yayasan Heesu · Cileungsi
+            Rumah Roti · Yayasan Heesu
           </p>
         </div>
       </section>
@@ -97,15 +101,15 @@ export default function HomePage() {
       <section className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Yudany</p>
-            <h2 className="mt-3 font-display text-4xl leading-tight">Anak adalah buah kasih karunia.</h2>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Hari ini</p>
+            <h2 className="mt-3 font-display text-4xl leading-tight">Rumah Roti, di bawah Yayasan Heesu.</h2>
           </div>
           <div className="space-y-5 text-base leading-8 text-ink/85 lg:col-span-8">
             <p>
-              Yayasan Kasih Karunia Yudany adalah organisasi nirlaba yang lahir dari kasih dan kepedulian terhadap anak-anak yang membutuhkan perhatian khusus karena persoalan ekonomi, psikososial, maupun fisiobiologis.
+              Yayasan Kasih Karunia Yudany tetap berdiri di samping karya ini. Yang mengurus rumahnya adalah Yayasan Heesu. Delapan puluh lima warga tinggal di Rumah Roti: orang tua yang terlantar, dan orang dengan gangguan jiwa.
             </p>
             <p>
-              Di tengah dunia yang semakin egosentris, Yudany ingin menjadi pelita dan harapan. Senyum mereka adalah cerminan mentari. Di tangan anak-anak inilah masa depan dipertaruhkan.
+              Heesu pernah mengasuh anak penyandang disabilitas ganda. Masa itu sudah tidak sama dengan penghuni hari ini. Potret anak-anak disimpan sebagai sejarah, bukan sebagai daftar yang masih tinggal di rumah.
             </p>
           </div>
         </div>
@@ -124,21 +128,21 @@ export default function HomePage() {
         <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:py-20">
           <div className="relative h-80 overflow-hidden rounded-[1.8rem] sm:h-[28rem]">
             <Image
-              src="/images/hero-care.jpg"
-              alt="Seorang pengasuh tersenyum di samping anak yang berbaring di ranjang"
+              src={today.src}
+              alt={today.alt}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-[center_30%]"
+              className="object-cover"
             />
           </div>
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Sejak 2008</p>
-            <h2 className="mt-3 font-display text-4xl leading-tight">Heesu, rumah perawatan yang menjadi keluarga.</h2>
+            <h2 className="mt-3 font-display text-4xl leading-tight">Heesu tetap rumahnya. Penghuninya kini berbeda.</h2>
             <p className="mt-5 leading-8 text-ink/85">
-              Yayasan Heesu “Cahaya Cinta” didirikan pada 11 November 2008 oleh Poong Nam Choi dan diresmikan Departemen Sosial pada 14 Maret 2009. Fokusnya merawat dan memberdayakan anak penyandang disabilitas ganda agar lebih mandiri, secara fisik maupun sosial.
+              Yayasan Heesu “Cahaya Cinta” didirikan pada 11 November 2008 oleh Poong Nam Choi dan diresmikan Departemen Sosial pada 14 Maret 2009. Bertahun-tahun rumah ini merawat anak penyandang disabilitas ganda.
             </p>
             <p className="mt-4 leading-8 text-ink/85">
-              Dari seorang fisioterapis, perawat, dan dokter umum, Heesu tumbuh bersama tenaga profesional dan relawan. Kini 19 anak dari berbagai latar medis dan sosial diasuh di sini — saluran berkat bagi mereka, keluarga, dan desa di sekitarnya.
+              Anak-anak itu tidak lagi dapat ditemui semuanya. Yang masih didampingi tinggal Vina dan dua anak lain, dititipkan di Yayasan Sayap Ibu. Karya yang berjalan di Cileungsi sekarang adalah Rumah Roti.
             </p>
             <Link href="/who-we-are" className="mt-6 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-navy underline decoration-leaf decoration-2 underline-offset-4">
               History, vision, and legalities
@@ -151,7 +155,7 @@ export default function HomePage() {
         <div className="flex items-end justify-between gap-6">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Programs</p>
-            <h2 className="mt-3 font-display text-4xl">Empat jalur pendampingan.</h2>
+            <h2 className="mt-3 font-display text-4xl">Rumah yang sedang berjalan.</h2>
           </div>
           <Link href="/programs" className="hidden text-sm font-semibold uppercase tracking-[0.16em] text-navy sm:inline">
             See all
@@ -175,17 +179,20 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-8">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Foster children</p>
-              <h2 className="mt-3 font-display text-4xl">Sembilan belas nama, satu rumah.</h2>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">History</p>
+              <h2 className="mt-3 font-display text-4xl">Anak-anak yang pernah kami asuh.</h2>
             </div>
             <Link href="/children" className="text-sm font-semibold uppercase tracking-[0.16em] text-navy">
-              All children
+              The archive
             </Link>
           </div>
+          <p className="mt-4 max-w-2xl text-muted">
+            Potret ini dari masa Heesu merawat anak penyandang disabilitas ganda. Mereka tidak lagi tinggal di rumah ini.
+          </p>
           <div className="mt-8 flex w-full gap-5 overflow-x-auto pb-2">
             {children.slice(0, 8).map((name) => (
               <Link key={name} href="/children" className="w-28 shrink-0 text-center sm:w-32">
-                <Portrait src={childImage(name)} alt={`Potret ${name}, anak asuh Yayasan Heesu`} />
+                <Portrait src={childImage(name)} alt={`Potret ${name}, anak yang pernah diasuh Yayasan Heesu`} />
                 <p className="mt-3 text-sm font-semibold">{name}</p>
               </Link>
             ))}
@@ -196,8 +203,8 @@ export default function HomePage() {
       <section className="mx-auto grid w-full max-w-6xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-12">
         <div className="relative min-h-64 overflow-hidden rounded-[1.8rem] lg:col-span-7">
           <Image
-            src="/images/hero-play.jpg"
-            alt="Seorang anak memegang kertas di ruang terapi berwarna"
+            src={givePhoto.src}
+            alt={givePhoto.alt}
             fill
             sizes="(max-width: 1024px) 100vw, 60vw"
             className="object-cover"
@@ -207,7 +214,7 @@ export default function HomePage() {
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-leaf">Ways to give</p>
           <h2 className="mt-3 font-display text-4xl leading-tight">Jadilah bagian dari pelita ini.</h2>
           <p className="mt-4 leading-7 text-white/85">
-            Donasi disalurkan ke rekening Yayasan Heesu. Setelah transfer, kirimkan bukti agar administrasi tetap rapi.
+            Donasi disalurkan ke rekening Yayasan Heesu, badan yang menaungi Rumah Roti. Setelah transfer, kirimkan bukti agar administrasi tetap rapi.
           </p>
           <Link href="/give" className="mt-6 inline-flex w-fit rounded-full bg-white px-5 py-3 text-sm font-semibold text-green">
             Donation details

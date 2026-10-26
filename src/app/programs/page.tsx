@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Programs",
-  description: "Terapi, pendidikan khusus, perawatan harian, dan program sosial Yayasan Heesu.",
+  description: "Rumah Roti yang dijalankan Yayasan Heesu hari ini, dan arsip terapi serta pendidikan dari masa perawatan anak.",
 };
 
 const therapies = [
@@ -61,12 +62,36 @@ export default function ProgramsPage() {
       <header className="mx-auto w-full max-w-6xl px-5 pb-6 pt-14 sm:px-8">
         <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Programs</p>
         <h1 className="mt-3 max-w-3xl font-display text-5xl leading-[0.95] sm:text-6xl">
-          Perawatan yang utuh, dari gerak sampai tetangga.
+          Yang berjalan hari ini adalah Rumah Roti.
         </h1>
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
+          Di bawah naungan Yayasan Heesu, rumah ini merawat 85 orang tua terlantar dan orang dengan gangguan jiwa. Terapi dan pendidikan di bagian bawah adalah arsip masa Heesu mengasuh anak-anak.
+        </p>
       </header>
 
+      <section id="rumah-roti" className="mx-auto w-full max-w-6xl px-5 py-8 sm:px-8">
+        <div className="grid gap-6 rounded-[1.6rem] bg-navy p-7 text-sand sm:p-10 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-leaf">Rumah Roti</p>
+            <h2 className="mt-3 font-display text-4xl text-white">85 jiwa, satu naungan.</h2>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="leading-8">
+              Warga tinggal, makan, dan berkumpul di rumah yang sama. Pengasuh menemani hari-hari itu, termasuk saat pemeriksaan kesehatan datang ke dalam rumah.
+            </p>
+            <Link href="/rumah-roti" className="mt-6 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-navy">
+              Lihat Rumah Roti
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section id="therapies" className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8">
-        <h2 className="font-display text-4xl">Therapies</h2>
+        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-green">Arsip panti anak</p>
+        <h2 className="mt-3 font-display text-4xl">Therapies</h2>
+        <p className="mt-3 max-w-2xl leading-7 text-muted">
+          Program di bawah ini dijalankan ketika Heesu merawat anak penyandang disabilitas ganda. Anak-anak itu tidak lagi tinggal di sini.
+        </p>
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {therapies.map((item) => (
             <article key={item.title} className="rounded-[1.5rem] bg-white p-6 ring-1 ring-line">
@@ -88,7 +113,7 @@ export default function ProgramsPage() {
               Pembelajaran yang menjawab karakteristik unik, yang tidak tertampung kurikulum sekolah biasa. Di lapangan, pendidikan luar biasa berarti kelas khusus, program khusus, atau layanan khusus bagi anak luar biasa.
             </p>
             <p>
-              Di Heesu, jalur ini juga menjadi pengembangan kompetensi: anak dilatih sesuai potensi yang masih dimiliki, bukan dipaksa masuk cetakan yang sama.
+              Pada masa itu, jalur ini juga menjadi pengembangan kompetensi: anak dilatih sesuai potensi yang masih dimiliki, bukan dipaksa masuk cetakan yang sama.
             </p>
           </div>
         </div>

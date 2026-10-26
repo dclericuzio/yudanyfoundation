@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s · Yudany Foundation",
   },
   description:
-    "Yayasan Kasih Karunia Yudany dan Yayasan Heesu merawat serta memberdayakan anak penyandang disabilitas ganda di Cileungsi, Bogor.",
+    "Yayasan Kasih Karunia Yudany dan Yayasan Heesu. Rumah Roti, di bawah naungan Heesu, merawat orang tua terlantar dan orang dengan gangguan jiwa di Cileungsi, Bogor.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
